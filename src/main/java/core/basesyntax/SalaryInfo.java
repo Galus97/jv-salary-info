@@ -22,8 +22,8 @@ public class SalaryInfo {
             for (String dateElement : correctDateList) {
                 String[] recordsElement = dateElement.split(" ");
                 if (name.equals(recordsElement[1])) {
-                    salary +=
-                            Integer.parseInt(recordsElement[2]) * Integer.parseInt(recordsElement[3]);
+                    salary += Integer.parseInt(recordsElement[2])
+                            * Integer.parseInt(recordsElement[3]);
                 }
             }
             salaryInfo += "\n" + name + " - " + salary;
@@ -31,7 +31,7 @@ public class SalaryInfo {
         return salaryInfo;
     }
 
-    private List<String> getCorrectDateList (String[] data, String dateFrom, String dateTo) {
+    private List<String> getCorrectDateList(String[] data, String dateFrom, String dateTo) {
         List<String> resultList = new ArrayList<>();
         for (String record : data) {
             String[] dataElement = record.split(" ");
